@@ -1,0 +1,39 @@
+#指定默认的环境
+spring:  profiles:    active: dev
+
+---
+#定义环境名称
+spring:  profiles: dev
+#语法: key:(必须有空格)value   
+#2.yml文件有层级结构 缩进方式控制层级
+server:
+  port: 80
+  servlet:
+   context-path: /   #表示根目录发布
+#为属性赋值,定义属性
+demo:
+  name: WDNMD
+  age:  18
+#为jdbcController赋值
+jdbc:
+  url: 127.0.0.1:3306
+  username: root
+  
+---
+#定义环境名称
+spring:
+  profiles: pro
+#语法: key:(必须有空格)value   
+#2.yml文件有层级结构 缩进方式控制层级
+server:
+  port: 8080
+  servlet:
+   context-path: /   #表示根目录发布
+#为属性赋值,定义属性
+demo:
+  name: WDNMD
+  age:  18
+#为jdbcController赋值
+jdbc:
+  url: 127.0.0.1:3306
+  username: root
